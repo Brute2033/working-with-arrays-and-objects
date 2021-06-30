@@ -21,7 +21,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
 
 
@@ -34,7 +34,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
+  const {firstName, lastName, title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -53,7 +53,10 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(population) {
+    const {utah, california, texas, arizona} = population
+    return utah + california + texas + arizona
+}
 
 
 
@@ -67,7 +70,19 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+// const cart = {
+//   carb: 'this',
+//   fat: 'is a',
+//   protein: 'pain'
+// }
+// const cart = []
+function ingredients( obj ){
+  const {carb, fat, protein} = obj
+  const cart = []
+  cart.push(carb, fat, protein)
+  return cart
+  
+}
 
 
 
@@ -85,8 +100,18 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
-
+function largeNumbers( {first, second, third} ){
+  // const {first, second, third} = numbers
+  let result = 0
+  if((first < second) && (first < third)){
+    result = first
+  } else if ((second < first) && (second < third)){
+    result = second
+  } else if ((third < first) && (third < second)){
+    result = third
+  }
+  return result
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -97,6 +122,15 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
-
+function numberGroups( {a, b, c} ){
+  let result = []
+  if((a.length > b.length) && (a.length > c.length)){
+    result = a
+  } else if ((b.length > a.length) && (b.length > c.length)){
+    result = b
+  } else if ((c.length > a.length) && (c.length > b.length)){
+    result = c
+  }
+  return result
+}
 
